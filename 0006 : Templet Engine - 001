@@ -1,0 +1,29 @@
+// Fisrt, Use EJS with express-generator
+//    cmd or linux - sudo npm install -g express-generator
+//                 - midir FILEDIR
+//                 - cd FILEDIR
+//                 - express --ejs
+
+//├── app.js
+//├── bin
+//│   └── www
+//├── package.json
+//├── public
+//│   ├── images
+//│   ├── javascripts
+//│   └── stylesheets
+//│       └── style.css
+//├── routes
+//│   ├── index.js
+//│   └── users.js
+//└── views
+//    ├── error.ejs
+//    └── index.ejs
+
+//Second, make a module
+//    cmd or linux in maked FILEDIR - npm install
+//                                  - node bin/www
+//
+//Third, Connect the internet
+//    internet - 127.0.0.1:3000 or localhost:3000
+// SHOW IN INTERNET - Express Welcome to Express
