@@ -1,0 +1,28 @@
+// First, Make a express-generator
+//    cmd or linux - sudo npm install - g express-generator
+//                 - mkdir FILENAME
+//                 - cd FILENAME
+//                 - express
+
+//├── app.js
+//├── bin
+//│   └── www
+//├── package.json
+//├── public
+//│   ├── images
+//│   ├── javascripts
+//│   └── stylesheets
+//│       └── style.css
+//├── routes
+//│   ├── index.js
+//│   └── users.js
+//└── views
+//    ├── error.jade
+//    ├── index.jade
+//    └── layout.jade
+
+// Second, make package.js Module
+//    cmd or linux in maked FILENAME - npm install
+//                                   - node bin/www
+// Third, Connect in interent
+//    internet - 127.0.0.1:3000 or localhost:8000
