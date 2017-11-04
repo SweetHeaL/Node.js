@@ -1,0 +1,3 @@
+console.log ('Hello, World!');
+
+//cmd - node FILENAME.js
