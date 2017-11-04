@@ -1,0 +1,24 @@
+// First, mkdir FOLDER
+
+var express = require ('express')
+  , http = require ('http')
+  , app = express ()
+  , server = http.createServer (app);
+
+app.get ('/' , function (req, res) {
+  res.send ('Hello /');
+});
+
+app.get ('/world.html', function (req, res) {
+  res.send ('Hello World');
+});
+
+server.listen (8000, function () {
+  console.log ('Express server listening on port ' + server.address().port);
+});
+
+// Second, Express setup
+//    in cmd or linux in dirfolder Wirte  : npm install express
+//
+// cmd - node FILENAME.js
+// internet - 127.0.0.1:8000 or localhost:8000
