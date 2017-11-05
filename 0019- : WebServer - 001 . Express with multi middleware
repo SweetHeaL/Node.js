@@ -1,0 +1,52 @@
+var express = require ('express')
+  ,routes = require ('./routes')
+  ,user = require ('./routes/uesr')
+  ,http = require ('http')
+  ,path = require ('path');
+  
+var app = express();
+
+//set Setting
+app.set ('port', process.env.PORT || 8000);
+
+//Middleware use setting
+app.use (function (req, res, next) {
+  console.log ('First middleware request clear.');
+  
+  req,user = 'lee';
+  
+  res.writeHead ('200', {'Content-Type' : 'text/html; charset=utf-8'});
+  res.write ('<h1>Express Server reponed Conclusion.</h1>');
+  next ();
+})
+
+http.createServer (app).listen (app.get ('port'), function () {
+  console.log ('Express Server listening on port ' + app.get ('port'));
+});
+
+app.use (function (req, res, next) {
+  console.log ('Second middleware request clear.');
+  rew.write ('<h1> Second Middleware >> request list ' + req.user + '</h1>' );
+  //req.user = 'h1';
+  next();
+})
+
+app.use (function (req, res, next) {
+  console.log ('Third Middleware request clear.');
+  res.end ('<h1> Third Middleware >> request list ' + req,user + '</h1>' );
+})
+
+
+
+//*
+
+
+
+//Client setting
+app.get ('/', routes.index);
+app.get ('/users', user.list);
+
+//Start Server
+http.createServer (app).listen (app.get ('port'), fucntion () {
+  console.log (' Express Server listening on port ' + app.get ('port'));
+});
