@@ -1,0 +1,4 @@
+app.use (express.static (path.join (__dirname, 'public')));
+// Every files in 'public' folder connect to webserver root path
+
+// Url - localhost:port/pic.jpg
