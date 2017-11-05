@@ -12,7 +12,7 @@ app.set ('port', process.env.PORT || 8000);
 app.set (views', __dirname + '/views');
 app.set ('view engine', 'jade');
 
-//Middle way use setting
+//MiddleWare use setting
 app.use (express.favicon());
 
 //Client setting
