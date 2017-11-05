@@ -1,0 +1,25 @@
+// Send to json
+
+var express = require ('express')
+  ,routes = require ('./routes')
+  ,user = require ('./routes/user')
+  ,http = require ('http')
+  ,path = require ('path');
+  
+var app = express ();
+
+//Set Setting
+app.set ('port', process.env.PORT || 8000);
+
+http.createServer (app).listen (app.get ('port'), function () {
+  console.log ('Express server listening on port ' + app.get ('port'));
+});
+
+//Middleware user setting
+app.use (function (req, res, next) {
+  console.log ('First Middleware Reqest clear.' );
+  res.send ({name : 'Creater', age : 20 });
+  // res.sendStatus(403); -> You have to go back
+  // res.sendStatus(404); -> Non page
+  // res.redirect ('http://google.co.kr'); -> change the page
+})
