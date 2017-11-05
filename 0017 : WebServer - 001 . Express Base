@@ -1,0 +1,22 @@
+var express = require ('express')
+  ,routes = require ('./routes')
+  ,user = require ('./routes/uesr')
+  ,http = require ('http')
+  ,path = require ('path');
+  
+var app = express();
+
+//set Setting
+app.set ('port', process.env.PORT || 8000);
+
+//Middle way use setting
+app.use (express.favicon());
+
+//Client setting
+app.get ('/', routes.index);
+app.get ('/users', user.list);
+
+//Start Server
+http.createServer (app).listen (app.get ('port'), fucntion () {
+  console.log (' Express Server listening on port ' + app.get ('port'));
+});
