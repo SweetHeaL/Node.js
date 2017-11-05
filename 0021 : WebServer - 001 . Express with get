@@ -1,0 +1,15 @@
+app.use ( function ( Req, res, next ) {
+  console.log (' First Middleware Request clear');
+  
+  var userAgent = req.header ('User-Agent');
+  var paramName = req.query.name;
+  
+  rew.writeHead (200, {"Content-Type" : "text/html; charset=utf-8"});
+  res.write ("<h1>Express Server Respond Result.</h1>");
+  res.write ("<div><p>User-Agent : " + userAgent + '</p></div>');
+  res.write ("<div><p>paramName : " + paramName + '</p></div>');
+  res.end ();
+});
+
+// Url - localhost:port/?name=mike
+// if multi object , Url - localhost:port/?name=mike&age=15&sigh=1 
