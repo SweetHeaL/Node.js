@@ -9,7 +9,7 @@ var app = express();
 //set Setting
 app.set ('port', process.env.PORT || 8000);
 
-//Middle way use setting
+//MiddleWare use setting
 app.use (express.favicon());
 
 //Client setting
